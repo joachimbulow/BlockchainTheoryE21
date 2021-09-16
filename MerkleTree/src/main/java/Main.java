@@ -49,7 +49,6 @@ public class Main {
 
     private static MerkleTree buildTree(ArrayList<String> leaves, MessageDigest md){
         ArrayList<MerkleTree> trees = new ArrayList<>();
-        // IOOB exception maybe?
         for (int i = 0; i < leaves.size(); i = i + 2){
             MerkleTree newTree = new MerkleTree(md);
             newTree.leftLeaf = new Leaf(md, leaves.get(i));;
