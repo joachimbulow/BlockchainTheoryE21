@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         ArrayList<String> inputStrings = new ArrayList<>(Arrays.asList("joachim", "bülow", "hejsa"));
-        Runnable collisionThread = new HashCollision(inputStrings, 7, md);
+        Runnable collisionThread = new HashCollision(inputStrings, 6, md);
         collisionThread.run();
 
     }
